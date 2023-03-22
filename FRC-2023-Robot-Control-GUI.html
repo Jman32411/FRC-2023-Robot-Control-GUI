@@ -2,6 +2,7 @@
 <html>
 <head>
 <style>
+
 .topButtonsTemplate {
     width:24%;
     height:14%;
@@ -49,30 +50,185 @@
     left:75.5%;
     background: #9af773;
 }
-</style>
-<script>
-function mouseDown() {
-  button.getElementById("myP").style.color = "red";
+
+
+.bottomButtonsTemplateCones {
+    width:10.75%;
+    height:10%;
+    position: absolute;
+    border: solid 1px black;
+    background: yellow;
+}
+.placeConeA1 {
+    bottom:.5%;
+    left:.75%;
+}
+.placeConeA2 {
+    bottom:11%;
+    left:.75%;
+}
+.placeConeC1 {
+    bottom:.5%;
+    left:22.75%;
+}
+.placeConeC2 {
+    bottom:11%;
+    left:22.75%;
+}
+.placeConeD1 {
+    bottom:.5%;
+    left:33.75%;
+}
+.placeConeD2 {
+    bottom:11%;
+    left:33.75%;
+}
+.placeConeF1 {
+    bottom:.5%;
+    left:55.75%;
+}
+.placeConeF2 {
+    bottom:11%;
+    left:55.75%;
+}
+.placeConeG1 {
+    bottom:.5%;
+    left:66.75%;
+}
+.placeConeG2 {
+    bottom:11%;
+    left:66.75%;
+}
+.placeConeI1 {
+    bottom:.5%;
+    left:88.75%;
+}
+.placeConeI2 {
+    bottom:11%;
+    left:88.75%;
 }
 
-function mouseUp() {
-  button.getElementById("myP").style.color = "blue";
+
+.bottomButtonsTemplateCubes {
+    width:10.75%;
+    height:10%;
+    position: absolute;
+    border: solid 1px black;
+    background: blueviolet;
 }
-</script>
+
+.placeCubeA3 {
+    bottom:21.5%;
+    left:.75%;
+}
+.placeCubeB1 {
+    bottom:.5%;
+    left:11.75%;
+}
+.placeCubeB2 {
+    bottom:11%;
+    left:11.75%;
+}
+.placeCubeB3 {
+    bottom:21.5%;
+    left:11.75%;
+}
+.placeCubeC3 {
+    bottom:21.5%;
+    left:22.75%;
+}
+.placeCubeD3 {
+    bottom:21.5%;
+    left:33.75%;
+}
+.placeCubeE1 {
+    bottom:.5%;
+    left:44.75%;
+}
+.placeCubeE2 {
+    bottom:11%;
+    left:44.75%;
+}
+.placeCubeE3 {
+    bottom:21.5%;
+    left:44.75%;
+}
+.placeCubeF3 {
+    bottom:21.5%;
+    left:55.75%;
+}
+.placeCubeG3 {
+    bottom:21.5%;
+    left:66.75%;
+}
+.placeCubeH1 {
+    bottom:.5%;
+    left:77.75%;
+}
+.placeCubeH2 {
+    bottom:11%;
+    left:77.75%;
+}
+.placeCubeH3 {
+    bottom:21.5%;
+    left:77.75%;
+}
+.placeCubeI3 {
+    bottom:21.5%;
+    left:88.75%;
+}
+</style>
+
 </head>
 <body>
 
+<!-- V  Top Intake buttons  V -->
 
-<button class="topButtonsTemplate cubePickup">Cube Pickup</button><br>
-<button class="topButtonsTemplate conePickupGroundOnSide">Cone Pickup (Ground, Sideways)</button><br>
-<button class="topButtonsTemplate conePickupGroundUpright">Cone Pickup (Ground, Upright)</button><br>
-<button class="topButtonsTemplate conePickupShelf">Cone Pickup (Shelf)</button><br>
-<button class="topButtonsTemplate midGrid">Mid Grid</button><br>
-<button class="topButtonsTemplate highGrid">High Grid</button><br>
-<button class="topButtonsTemplate armStorageFieldTraversal">Arm Storage (Field Traversal)</button><br>
-<button class="topButtonsTemplate armStorageInsideFrame">Arm Storage (In Frame)</button><br>
+<button class="topButtonsTemplate cubePickup">Cube Pickup</button>
+<button class="topButtonsTemplate conePickupGroundOnSide">Cone Pickup (Ground, Sideways)</button>
+<button class="topButtonsTemplate conePickupGroundUpright">Cone Pickup (Ground, Upright)</button>
+<button class="topButtonsTemplate conePickupShelf">Cone Pickup (Shelf)</button>
+<button class="topButtonsTemplate midGrid">Mid Grid</button>
+<button class="topButtonsTemplate highGrid">High Grid</button>
+<button class="topButtonsTemplate armStorageFieldTraversal">Arm Storage (Field Traversal)</button>
+<button class="topButtonsTemplate armStorageInsideFrame">Arm Storage (In Frame)</button>
 
+<!-- ^  Top Intake Buttons  ^ -->
+<!-- V  Cone Buttons  V -->
 
+<button class="bottomButtonsTemplateCones placeConeA1"></button>
+<button class="bottomButtonsTemplateCones placeConeA2"></button>
+<button class="bottomButtonsTemplateCones placeConeC1"></button>
+<button class="bottomButtonsTemplateCones placeConeC2"></button>
+<button class="bottomButtonsTemplateCones placeConeD1"></button>
+<button class="bottomButtonsTemplateCones placeConeD2"></button>
+<button class="bottomButtonsTemplateCones placeConeF1"></button>
+<button class="bottomButtonsTemplateCones placeConeF2"></button>
+<button class="bottomButtonsTemplateCones placeConeG1"></button>
+<button class="bottomButtonsTemplateCones placeConeG2"></button>
+<button class="bottomButtonsTemplateCones placeConeI1"></button>
+<button class="bottomButtonsTemplateCones placeConeI2"></button>
+
+<!-- ^  Cone Buttons  ^ -->
+<!-- V  Cube Buttons  V -->
+
+<button class="bottomButtonsTemplateCubes placeCubeA3"></button>
+<button class="bottomButtonsTemplateCubes placeCubeB1"></button>
+<button class="bottomButtonsTemplateCubes placeCubeB2"></button>
+<button class="bottomButtonsTemplateCubes placeCubeB3"></button>
+<button class="bottomButtonsTemplateCubes placeCubeC3"></button>
+<button class="bottomButtonsTemplateCubes placeCubeD3"></button>
+<button class="bottomButtonsTemplateCubes placeCubeE1"></button>
+<button class="bottomButtonsTemplateCubes placeCubeE2"></button>
+<button class="bottomButtonsTemplateCubes placeCubeE3"></button>
+<button class="bottomButtonsTemplateCubes placeCubeF3"></button>
+<button class="bottomButtonsTemplateCubes placeCubeG3"></button>
+<button class="bottomButtonsTemplateCubes placeCubeH1"></button>
+<button class="bottomButtonsTemplateCubes placeCubeH2"></button>
+<button class="bottomButtonsTemplateCubes placeCubeH3"></button>
+<button class="bottomButtonsTemplateCubes placeCubeI3"></button>
+
+<!-- ^  Cube Buttons  ^ -->
 
 </body>
 </html>
