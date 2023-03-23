@@ -10,47 +10,46 @@
     font-size: 32px;
     border: solid 5px black;
 }
-.cubePickup {
+#cube_pickup {
     top:.5%;
     left:.5%;
     background: blueviolet;
 }
-.conePickupGroundOnSide {
+#cone_pickup_side {
     top:.5%;
     left:25.5%;
     background: yellow;
 }
-.conePickupGroundUpright {
+#cone_pickup_ground {
     top:.5%;
     left:50.5%;
     background: yellow;
 }
-.conePickupShelf {
+#cone_pickup_shelf {
     top:.5%;
     left:75.5%;
     background: yellow;
 }
-.midGrid {
+#mid_grid {
     top:15%;
     left:.5%;
     background: #9af773;
 }
-.highGrid {
+#high_grid {
     top:15%;
     left:25.5%;
     background: #9af773;
 }
-.armStorageFieldTraversal {
+#arm_storage_traversal {
     top:15%;
     left:50.5%;
     background: #9af773;
 }
-.armStorageInsideFrame {
+#arm_storage_start {
     top:15%;
     left:75.5%;
     background: #9af773;
 }
-
 
 .bottomButtonsTemplateCones {
     width:10.75%;
@@ -107,8 +106,6 @@
     bottom:11%;
     left:88.75%;
 }
-
-
 .bottomButtonsTemplateCubes {
     width:10.75%;
     height:10%;
@@ -181,17 +178,16 @@
 
 </head>
 <body>
-
 <!-- V  Top Intake buttons  V -->
 
-<button class="topButtonsTemplate cubePickup">Cube Pickup</button>
-<button class="topButtonsTemplate conePickupGroundOnSide">Cone Pickup (Ground, Sideways)</button>
-<button class="topButtonsTemplate conePickupGroundUpright">Cone Pickup (Ground, Upright)</button>
-<button class="topButtonsTemplate conePickupShelf">Cone Pickup (Shelf)</button>
-<button class="topButtonsTemplate midGrid">Mid Grid</button>
-<button class="topButtonsTemplate highGrid">High Grid</button>
-<button class="topButtonsTemplate armStorageFieldTraversal">Arm Storage (Field Traversal)</button>
-<button class="topButtonsTemplate armStorageInsideFrame">Arm Storage (In Frame)</button>
+<button id="cube_pickup" class="topButtonsTemplate cubePickup" onclick="clickButton()">Cube Pickup</button>
+<button id="cone_pickup_side" class="topButtonsTemplate conePickupGroundOnSide"onclick="clickButton()">Cone Pickup (Ground, Sideways)</button>
+<button id="cone_pickup_ground" class="topButtonsTemplate conePickupGroundUpright"onclick="clickButton()">Cone Pickup (Ground, Upright)</button>
+<button id="cone_pickup_shelf" class="topButtonsTemplate conePickupShelf"onclick="clickButton()">Cone Pickup (Shelf)</button>
+<button id="mid_grid" class="topButtonsTemplate midGrid"onclick="clickButton()"onclick="clickButton()">Mid Grid</button>
+<button id="high_grid" class="topButtonsTemplate highGrid"onclick="clickButton()"onclick="clickButton()">High Grid</button>
+<button id="arm_storage_traversal" class="topButtonsTemplate armStorageFieldTraversal"onclick="clickButton()">Arm Storage (Field Traversal)</button>
+<button id="arm_storage_start" class="topButtonsTemplate armStorageInsideFrame"onclick="clickButton()">Arm Storage (In Frame)</button>
 
 <!-- ^  Top Intake Buttons  ^ -->
 <!-- V  Cone Buttons  V -->
@@ -208,7 +204,6 @@
 <button class="bottomButtonsTemplateCones placeConeG2"></button>
 <button class="bottomButtonsTemplateCones placeConeI1"></button>
 <button class="bottomButtonsTemplateCones placeConeI2"></button>
-
 <!-- ^  Cone Buttons  ^ -->
 <!-- V  Cube Buttons  V -->
 
@@ -229,6 +224,29 @@
 <button class="bottomButtonsTemplateCubes placeCubeI3"></button>
 
 <!-- ^  Cube Buttons  ^ -->
+<script>
+</script>
+<script>
+class Data {
+  constructor(cube_pickup, cone_pickup_ground, cone_pickup_side, cone_pickup_shelf, mid_grid, high_grid, arm_storage_traversal, arm_storage_start, auto_place) {
+      this.cube_pickup = cube_pickup;
+      this.cone_pickup_ground = cone_pickup_ground;
+      this.cone_pickup_side = cone_pickup_side;
+      this.cone_pickup_shelf = cone_pickup_shelf;
+      this.mid_grid = mid_grid;
+      this.high_grid = high_grid;
+      this.arm_storage_traversal;
+      this.arm_storage_start;
+      this.auto_place = [auto_place[0], auto_place[1], auto_place[2]];
 
+  }
+}
+
+function clickButton() {
+  console.log("hi");
+  document.write(event.target.id);
+  websocket.send('{"name":' + id + '}');
+}
+</script>
 </body>
 </html>
